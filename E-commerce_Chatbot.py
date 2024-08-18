@@ -4,10 +4,10 @@ import comet_llm
 
 # Comet API 키 설정
 
-MY_COMET_KEY = 'AqLaPzNJxWIxibcKnZkqMWL1d' # st.secrets["comet_api_key"]
+COMET_API_KEY = st.secrets['COMET_API_KEY'] # 또는 st.secrets['COMET_API_KEY'] 대신 직접 입력 (st.secrets 관련 내용은 https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management 참조)
 
 # Comet LLM 초기화
-comet_llm.init(project='E-commerce_Chatbot', api_key=MY_COMET_KEY) # 이름 변경하기
+comet_llm.init(project='E-commerce_Chatbot', api_key=COMET_API_KEY)
 
 # Product List 및 Context 설정
 product_list = '''
